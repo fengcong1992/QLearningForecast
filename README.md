@@ -1,1 +1,2 @@
 # QLearningForecast
+# This package contains the data and functions necessarily to perform 9 benchmark probabilistic solar power forecasts at two temporal resolutions: climatology, CH-PeEn, PeEn, NWP ensemble, and Gaussian error distributions. The functions to perform the ECMWF-based forecasts are included, but the data is proprietary and cannot be directly shared; instead, batch scripts and .R scripts used to access the data are included for those with access to ECMWF's MARS database. 
