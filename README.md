@@ -30,13 +30,13 @@ root_save <- '~/results'
 Rscript qlearning_load_forecasting.R
 ```
 ## Publications
-If you use this package in your research, please cite our publications:
+**If you use this package in your research, please cite our publications**:
 
 Feng, C. and Zhang, J., 2019, February. Reinforcement learning based dynamic model selection for short-term load forecasting. In 2019 IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT) (pp. 1-5). IEEE.
 
 Feng, C., Sun, M. and Zhang, J., 2019. Reinforced Deterministic and Probabilistic Load Forecasting via Q-Learning Dynamic Model Selection. IEEE Transactions on Smart Grid, 11(2), pp.1377-1386. 
 
-Collaborations are always welcomed if more help is needed.
+**Collaborations are always welcomed if more help is needed.**
 ## License
 MIT License, Copyright (c) 2020 Cong Feng
 
