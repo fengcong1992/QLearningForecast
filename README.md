@@ -13,32 +13,20 @@ Ideally, Q-learning could be used to dynamically select forecasting models from 
 The example dataset in this repo contains load forecasts from the 10 machine learning with a length of 5 days. Q-learning agents will learn from previous four days' forecasts and make decisions of selecting models for the last day.
 
 ### Environment
-Install within R:
-* Install dependencies
 ```
-docker build -t bvlc/caffe:gpu ./gpu
-# check if working
-docker run -ti bvlc/caffe:gpu caffe device_query -gpu 0
-# get a bash in container to run examples
-docker run -ti --volume=$(pwd):/SegNet -u $(id -u):$(id -g) bvlc/caffe:gpu bash
+# Install packages within R
+install.packages(c("zoo"))
 ```
-install.packages(c("ggplot2", "ggfan", "here", "ncdf4", "pracma", "reshape2", "tibble", "tidyr", "truncnorm" ))
-* Install solarbenchmarks
-install.packages(<solarbenchmarks_0.1.0.tar.gz in local directory>, repos=NULL)
 
-From command line within the solarbenchmarks directory:
-Rscript benchmark_forecast_comparison.R
-
-Example net specification and solver prototext files are given in examples/segnet.
-To train a model, alter the data path in the ```data``` layers in ```net.prototxt``` to be your dataset.txt file (as described above).
-
-In the last convolution layer, change ```num_output``` to be the number of classes in your dataset.
-
-### Training
-
-In solver.prototxt set a path for ```snapshot_prefix```. Then in a terminal run
-```./build/tools/caffe train -solver ./examples/segnet/solver.prototxt```
-
+### Execute example code
+```
+# Specify directories in qlearning_load_forecasting.R in R
+root_code <- '~/R'
+root_data <- '~/data'
+root_save <- '~/results'
+# run R script
+Rscript qlearning_load_forecasting.R
+```
 ## Publications
 
 If you use this software in your research, please cite our publications:
@@ -49,5 +37,14 @@ Feng, C., Sun, M. and Zhang, J., 2019. Reinforced Deterministic and Probabilisti
 
 
 ## License
-This extension to the Caffe library is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary here:
-http://creativecommons.org/licenses/by-nc/4.0/
+MIT License, Copyright (c) 2020 Cong Feng
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
