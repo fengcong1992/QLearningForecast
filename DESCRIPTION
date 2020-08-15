@@ -1,0 +1,11 @@
+Package: QLearnForecast
+Type: Package
+Title: Reinforced Load Forecasting via Q-Learning Dynamic Model Selection
+Version: 1.0.0
+Author: Cong Feng
+Maintainer: Cong Feng <joey.fueng@outlook.com>
+Description: Inplements dynamic model selection via Q-learning for machine learning-based load forecasting.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
