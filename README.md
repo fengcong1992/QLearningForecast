@@ -9,7 +9,7 @@ As described in:
 
 
 ## How to use
-Ideally, Q-learning could be used to dynamically select forecasting models from any model pool for any forecasting task. In this repo, we demonstrate selecting models from a model pool with 10 machine learning models for 1-houar-ahead electricity load forecasting problem.
+Ideally, Q-learning could be used to dynamically select forecasting models from any model pool for any forecasting task. In this repo, we demonstrate selecting models from a model pool with 10 machine learning models for 1-hour-ahead electricity load forecasting problem.
 
 ### Dataset
 The example dataset in this repo contains load forecasts from the 10 machine learning with a length of 5 days. Q-learning agents will learn from previous four days' forecasts and make decisions of selecting models for the last day.
