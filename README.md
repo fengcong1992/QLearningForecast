@@ -36,7 +36,7 @@ Feng, C. and Zhang, J., 2019, February. Reinforcement learning based dynamic mod
 
 Feng, C., Sun, M. and Zhang, J., 2019. Reinforced Deterministic and Probabilistic Load Forecasting via Q-Learning Dynamic Model Selection. IEEE Transactions on Smart Grid, 11(2), pp.1377-1386. 
 
-**Collaborations are always welcomed if more help is needed.**
+**Collaborations are always welcome if more help is needed.**
 ## License
 MIT License, Copyright (c) 2020 Cong Feng
 
