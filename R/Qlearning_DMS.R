@@ -73,10 +73,11 @@ Qlearning_DMS <- function(QMS_no_models, QMS_no_episodes, QMS_no_hour, QMS_init_
     vector_best <- c(vector_best, colnames(data_nr_rk)[which.min(data_nr_rk)])
   }
 
+  state_step <- vector_best[1]
   for (j in 1:no_hour) {
-    state_step <- vector_best[j]
-    result_dayp <- c(result_dayp, df_select[(j+1), state_step])
+    result_dayp <- c(result_dayp, df_select[(j+1), colnames(df_select)[which.max(Q_table[state_step,])+1]])
     result_dayp_selection <- c(result_dayp_selection, colnames(df_select)[which.max(Q_table[state_step,])+1])
+    state_step <- colnames(df_select)[which.max(Q_table[state_step,])+1]
   }
 
   return_obj <- result_dayp
